@@ -11,6 +11,14 @@ public class StudentController {
     @Autowired
     private  StudentRepository studentRepository;
 
+    @Autowired
+    private StudentSevice studentSevice;
+
+    @GetMapping("/0")
+    public void count(){
+        studentSevice.setName("0");
+    }
+
     @GetMapping("/greet")
     public  String greet(String name){
         return  new String("hello" + name);

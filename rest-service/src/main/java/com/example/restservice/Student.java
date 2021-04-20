@@ -3,29 +3,20 @@ package com.example.restservice;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "student")
+@Table(name = "STUDENT")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  int number;
+    private  int id;
 
     private  String name;
 
     Student() {
     }
 
-    public Student(int number, String name) {
-        this.number = number;
-        this.name = name;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
+    public int getId() {
+        return id;
     }
 
     public String getName() {
